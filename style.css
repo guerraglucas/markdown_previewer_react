@@ -1,0 +1,110 @@
+@import url("https://fonts.googleapis.com/css2?family=Oxygen:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Oxygen", sans-serif;
+}
+#wrapper {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  background: linear-gradient(45deg, rgb(58, 67, 117), rgb(28, 94, 77));
+}
+#wrapper a {
+  text-decoration: none;
+  color: white;
+  padding: 10px;
+  transition: 200ms;
+}
+#wrapper a:hover {
+  background-color: black;
+}
+
+header {
+  background-color: white;
+  padding: 10px;
+  font-size: 40px;
+  margin: 10px;
+  transition: 200ms;
+}
+header:hover {
+  background-color: black;
+  color: white;
+}
+
+#container-titles {
+  display: flex;
+  justify-content: space-around;
+  width: 90vw;
+  margin: 10px 0 10px 0;
+}
+
+#container-titles * {
+  background-color: black;
+  color: white;
+  font-size: 25px;
+  padding: 10px;
+}
+#container-titles i {
+  padding: 0;
+}
+
+#container {
+  width: 90vw;
+  height: 90vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  overflow: hidden;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  box-shadow: 5px 5px 5px black;
+  font-family: "Ubuntu", sans-serif;
+}
+
+#editor,
+#preview {
+  width: 50%;
+  overflow: scroll;
+  padding: 20px;
+  font-size: 16px;
+}
+
+#editor {
+  border: none;
+  border-right: 3px solid black;
+}
+#preview {
+  background-color: white;
+  border-left: 3px solid black;
+}
+
+@media (max-width: 660px) {
+  #container {
+    flex-direction: column;
+    width: 95vw;
+    height: auto;
+    background-color: transparent;
+    box-shadow: none;
+  }
+  #editor,
+  #preview {
+    width: auto;
+    height: 800px;
+    margin: 10px 0 10px 0;
+    border: none;
+    background-color: white;
+    box-shadow: 5px 5px 5px black;
+    border-radius: 5px;
+  }
+  #wrapper {
+    height: auto;
+  }
+  #container-titles {
+    visibility: hidden;
+  }
+}
